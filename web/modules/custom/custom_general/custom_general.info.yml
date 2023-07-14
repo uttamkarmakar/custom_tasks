@@ -1,0 +1,9 @@
+name: Custom General
+description: This custom is made to implement custom hooks
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
+version: ^9 || ^10
+dependencies:
+  - devel
+    
