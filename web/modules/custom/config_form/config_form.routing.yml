@@ -1,0 +1,8 @@
+config_form.config:
+  path: 'admin/config/config-form'
+  defaults:
+    _form: '\Drupal\config_form\Form\MyFirstConfigForm'
+    _title: 'Custom Configuration Form'
+  requirements:
+    _permission: 'access content'
+      

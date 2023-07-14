@@ -1,0 +1,6 @@
+name: Generic Form
+description: Module to generate a generic form
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
+version: ^9 || ^10

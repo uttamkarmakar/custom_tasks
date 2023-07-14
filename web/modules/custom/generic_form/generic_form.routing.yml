@@ -1,0 +1,7 @@
+generic_form.generic:
+  path: 'generic-form'
+  defaults:
+    _form: '\Drupal\generic_form\Form\GenericForm'
+    _title: 'Generic Form'
+  requirements:
+    _permission: 'access content'  

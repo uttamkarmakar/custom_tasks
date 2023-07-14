@@ -1,0 +1,8 @@
+name: Config Form Module
+description: Custom Module for creating config form
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
+version: ^9 || ^10
+dependencies:
+  - mymodule
