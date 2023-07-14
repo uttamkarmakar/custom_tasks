@@ -1,0 +1,14 @@
+name: My Module
+description: This is my first custom made module.
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
+version: ^9 || ^10
+dependencies:
+  # Adding a core module as dependency
+  - views_ui
+  # Adding a sub-module as dependency
+  - devel:devel_generate
+  #Adding a contributed module as a dependency
+  - pathauto
+  
