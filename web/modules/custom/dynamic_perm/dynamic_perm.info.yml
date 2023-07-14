@@ -1,0 +1,5 @@
+name: 'Dynamic Permission'
+type: module
+description: 'Module for dynamic permissions'
+core_version_requirement: ^9 || ^10
+package: Custom

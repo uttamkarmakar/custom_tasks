@@ -1,0 +1,16 @@
+custom_permission:
+  title: 'This is my first custom permission'
+  description: 'Gives static permission to the users'
+
+permission_callbacks:
+  - '\Drupal\mymodule\Controller\MyFirstController::dynamicPermissions'
+
+controller_page_perm:
+  title: 'Basic Page: Controller permission'
+  description: 'Description for controller based on node permission'
+  
+access_hello_page:
+  title: 'This is the permission for hello page'  
+  description: 'Gives users to access permission for hello page'
+  resrtict access: true
+  

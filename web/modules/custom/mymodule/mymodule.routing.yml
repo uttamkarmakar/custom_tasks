@@ -1,0 +1,17 @@
+mymodule.first_route:
+  path: 'first-route'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\MyFirstController::myFunction'
+    _title: 'My First Custom Page'
+  requirements:
+    _permission:  'custom_permission'
+
+mymodule.hello_route:
+  path: 'hello'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\HelloController::helloMethod'
+    _title: 'Hello Page'
+  requirements:
+    _permission: 'access content'
+    
+
