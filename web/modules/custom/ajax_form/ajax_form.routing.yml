@@ -1,0 +1,7 @@
+ajax_form.route:
+  path: 'first-ajax-form'
+  defaults:
+    _form: '\Drupal\ajax_form\Form\MyAjaxForm'
+    _title: 'My First Ajax Form'
+  requirements:
+    _permission: 'access content'
