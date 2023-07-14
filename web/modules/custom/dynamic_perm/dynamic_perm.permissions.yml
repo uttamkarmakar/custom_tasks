@@ -1,0 +1,6 @@
+permission_callbacks:
+  - '\Drupal\dynamic_perm\PermissionProvider::dynamicPermissions'
+  
+dynamic permission:
+  title: 'My Permission'
+  description: 'Gives permissions'

@@ -1,0 +1,7 @@
+dynamic_permission.route:
+  path: 'mymodule-page'
+  defaults:
+    _controller: '\Drupal\dynamic_perm\Controller\MyController::myMethod'
+    _title: 'MyModule Page'
+  requirements:
+    _permission: 'dynamic permission'
