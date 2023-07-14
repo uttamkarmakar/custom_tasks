@@ -1,0 +1,48 @@
+#Route for the /mypath
+rouitng_tasks.restricted.route:
+  path: 'mypath'
+  defaults:
+    _controller: '\Drupal\routing_tasks\Controller\MyRoute::myMethod'
+    _title: 'Welcome to Routing Task'
+  requirements:
+    _permission: 'access the custom page'
+    _role: 'administrator+developer'
+
+#Route for user/{uid} page
+routing_tasks.user:
+  path: 'user/{uid}'
+  defaults:
+    _controller: '\Drupal\routing_tasks\Controller\MyRoute::userMessage'
+    _title: 'Route for user page'    
+  requirements:
+    _permission: 'access content'
+
+#Dynamic route to show two parameters
+routing_tasks.dispaly_values:
+  path: '/my-details'
+  defaults:
+    _controller: '\Drupal\routing_tasks\Controller\MyRoute::userDetails'
+    _title: 'User Details Page'    
+  requirements:
+    _example_access_check: TRUE
+
+#Campaign/value task    
+routing_tasks.campaign_route:
+  path: '/campaign/value/{dynamicValue}'
+  defaults:
+    _controller: '\Drupal\routing_tasks\Controller\MyRoute::campaignValues'
+    _title: 'Campaign value page'
+  requirements:
+    _permission: 'access content'
+
+routing_task.new_route:
+  path: 'new-route'    
+  defaults:
+    _controller: '\Drupal\routing_tasks\Controller\MyRoute::newRoute'
+    _title: 'New route'
+  requirements:
+    _permission: 'access content'  
+      
+
+
+
