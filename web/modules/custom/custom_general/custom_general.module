@@ -1,0 +1,108 @@
+<?php
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\user\Entity\User;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_form_alter()
+ */
+function custom_general_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form_id == 'node_article_edit_form') {
+    // \Drupal::messenger()->addMessage("form_id of this form is @id: ",['@id' => $form_id]);
+    $form['actions']['submit']['#value'] = "Click to Edit this Great Article!!";
+    $form['body']['widget'][0]['#title'] = 'New body';
+    $form['body']['widget'][0]['#required'] = TRUE;
+    // $form['body']['#required'] = TRUE;
+    $form['title']['widget'][0]['value']['#title'] = 'New Title';
+  } elseif ($form_id == 'node_article_form') {
+    $form['actions']['submit']['#value'] = ("Save this Great Article!!");
+  } elseif ($form_id == 'taxonomy_vocabulary_form') {
+    $form['description']['#title'] = ("Please give a brief description quickly");
+  }
+}
+/**
+ * Implements hook_user_login()
+ */
+function custom_general_user_login(AccountInterface $account)
+{
+  $current_user = $account->getAccountName();
+  \Drupal::logger('custom_general')->notice('User @username logged in.', ['@username' => $current_user]);
+  \Drupal::messenger()->addMessage(('Welcome to Innoraft, ' . $current_user),TRUE);
+
+}
+/**
+ * implements hook_user_cancel()
+ */
+function custom_general_user_cancel($edit,UserInterface $account, string $method)
+{
+    // Retrieve the user account using the provided user ID.
+    $user = User::load($account->id());
+  
+    // Perform custom actions based on the cancellation method.
+    if ($method === 'user_cancel_block') {
+      // User is being blocked.
+      \Drupal::logger('custom_general')->notice('User @username has been blocked.', ['@username' => $user->getAccountName()]);
+    }
+    elseif ($method === 'user_cancel_delete') {
+      // User is being deleted.
+      \Drupal::logger('custom_general')->notice('User @username has been deleted.', ['@username' => $user->getAccountName()]);
+    }
+  }
+
+/**
+ * Implements hook_entity_view()
+ */
+function custom_general_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode)
+{
+  $module_handler = \Drupal::moduleHandler();
+  $module_handler->invokeAll('node_view_count', [$entity, &$build]);
+}
+
+/**
+ * Implements hook_node_view_count().
+ */
+function custom_general_node_view_count(EntityInterface $entity, array &$build)
+{
+  if ($entity instanceof \Drupal\node\NodeInterface && \Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
+    $session = \Drupal::request()->getSession();
+    $current_count = $session->get('current_count', []);
+    // dd($current_count);
+    if (!isset($current_count[$entity->id()])) {
+      $current_count[$entity->id()] = 1;
+    } else {
+      $current_count[$entity->id()]++;
+    }
+    $session->set('current_count', $current_count);
+    \Drupal::messenger()->addMessage(t('You have visited node @nid for @total times in this session', [
+      '@nid' => $entity->id(),
+      '@total' => $current_count[$entity->id()],
+    ]));
+    $build['#cache']['max-age'] = 0;
+  }
+  /**
+   * Implements hook_user_insert()
+   */
+  function custom_general_user_insert(AccountInterface $account,MailManagerInterface $mailManager) {
+    // Get the user email and username.
+    $email = $account->getEmail();
+    $username = $account->getAccountName();
+  
+    // Compose the email message.
+    $message = "Welcome, $username! Your account has been created successfully.";
+  
+    // Send the email to the user.
+    // $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'custom_general';
+    $key = 'user_insert';
+    $to = $email;
+    $params['message'] = $message;
+  
+   $mailManager->mail($module, $key, $to, 'en', $params, NULL, TRUE);
+  }
+}
+
