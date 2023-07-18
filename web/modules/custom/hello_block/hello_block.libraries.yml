@@ -1,0 +1,19 @@
+custom-style:
+  version: 1.x
+  css:
+    theme:
+      css/custom-styles.css: {}
+    
+welcome-style:
+  version: 1.x
+  css:
+    theme:
+      css/welcome-styles.css: {}
+
+welcome-role-styles:
+  version: 1.x
+  css:
+    theme: 
+      css/welcome-role-style-my.css: {}
+            
+      

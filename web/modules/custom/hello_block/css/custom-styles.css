@@ -1,0 +1,11 @@
+.custom-heading {
+   color: white;
+   text-align: center;
+}
+
+h3 {
+  color: white; 
+}
+.block-test-block {
+  background-image: url('../image/img.jpg');
+}

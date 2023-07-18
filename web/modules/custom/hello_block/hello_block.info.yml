@@ -1,0 +1,7 @@
+name: Hello block
+description: Starting with blocks
+type: module
+package: Custom
+core_version_requirement: ^10
+version: 1.0
+

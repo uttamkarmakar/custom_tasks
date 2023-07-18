@@ -19,7 +19,7 @@ class MyRouteSubscriber extends RouteSubscriberBase {
       // dd($route);
       $requirements = $route->getRequirements();
       // dd($requirements);
-      // Check if the specific role requirement exists.
+      // Check if the specific role requirement exists
 
       if (isset($requirements['_role'])) {
         $roleRequirement = $requirements['_role'];

@@ -1,0 +1,9 @@
+hello_block.custom_route:
+  path: 'custom-welcome-page'
+  defaults:
+    _controller: 'Drupal\hello_block\Controller\MyController::myPage'
+    _title: 'Custom welcome page'
+  requirements:
+    _permission: 'access content'
+    
+      

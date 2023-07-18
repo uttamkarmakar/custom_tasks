@@ -1,0 +1,40 @@
+<?php
+  /**
+   * Implements hook_theme()
+   */
+  function hello_block_theme($existing,$type,$home,$path) {
+    return [
+      'custom-block' => [
+        'variables' => [
+          'data' => [],
+        ],
+      ],
+      'welcome-block' => [
+        'variables' => [
+          'data' => [],
+        ],
+      ],
+
+      'welcome-role' => [
+        'variables' => [
+          'data' => [],
+        ],
+      ]
+    ];
+  }
+
+  /**
+ * Implements hook_form_user_login_form_alter().
+ */
+function hello_block_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+  // Add a custom submit handler to modify the redirect destination.
+  $form['#submit'][] = 'hello_block_custom_login_submit';
+}
+
+/**
+ * Custom submit handler for the user login form.
+ */
+function hello_block_custom_login_submit($form, &$form_state) {
+  // Modify the redirect destination after login.
+  $form_state->setRedirect('hello_block.custom_route');
+}
