@@ -1,0 +1,4 @@
+services:
+  dynamic_perm.permission_provider:
+    class: Drupal\dynamic_perm\PermissionProvider
+    arguments: ['@current_user']
