@@ -1,0 +1,4 @@
+services:
+  mymodule.hello_controller:
+    class: Drupal\mymodule\Controller\HelloController
+    arguments: ['@current_user']
