@@ -1,0 +1,25 @@
+uuid: f882471e-9dc9-4b6e-9756-c47ece1a48d8
+langcode: en
+status: false
+dependencies:
+  module:
+    - hello_block
+    - system
+  theme:
+    - olivero
+id: olivero_testblock
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'Test Block'
+settings:
+  id: 'Test Block'
+  label: 'Test Block'
+  label_display: visible
+  provider: hello_block
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

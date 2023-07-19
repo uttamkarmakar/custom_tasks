@@ -1,0 +1,15 @@
+dependency_module.sum_route:
+  path: '/my-sum'
+  defaults:
+    _controller: 'Drupal\dependency_module\Controller\MyController::displaySum'
+    _title: 'Display Sum Page'
+  requirements:
+    _permission: 'access content'  
+
+dependency_module.title_route:
+  path: '/show-node-title/{nid}'
+  defaults:
+    _controller: '\Drupal\dependency_module\Controller\MyController::displayTitle'
+  requirements:
+    _permission: 'access content'
+    

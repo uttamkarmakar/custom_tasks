@@ -1,0 +1,28 @@
+uuid: 2048b1a2-f0fd-471b-9d8a-a423d5c57f54
+langcode: en
+status: false
+dependencies:
+  module:
+    - myblock
+    - system
+  theme:
+    - olivero
+id: olivero_myblock
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: my_block
+settings:
+  id: my_block
+  label: 'My block'
+  label_display: visible
+  provider: myblock
+  custom_text: ''
+  custom_checkbox: false
+  custom_radio: option1
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

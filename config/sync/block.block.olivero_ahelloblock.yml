@@ -1,0 +1,28 @@
+uuid: b16abfb5-5341-4b89-a61f-cd52ec0b09b3
+langcode: en
+status: false
+dependencies:
+  module:
+    - hello_block
+    - system
+  theme:
+    - olivero
+id: olivero_ahelloblock
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'A Hello block'
+  label_display: visible
+  provider: hello_block
+  custom_text: Uttam
+  custom_checkbox: 1
+  custom_radio: option2
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,5 @@
+name: Dependency Module
+description: This module contains the tasks related to services and DI
+type: module
+package: Custom
+core_version_requirement: ^10

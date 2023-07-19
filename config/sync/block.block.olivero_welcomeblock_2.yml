@@ -1,0 +1,25 @@
+uuid: 1cf40301-5bf1-4a2d-8dd6-0df7f50001d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_block
+    - system
+  theme:
+    - olivero
+id: olivero_welcomeblock_2
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: 'Welcome Block'
+settings:
+  id: 'Welcome Block'
+  label: 'Welcome Block'
+  label_display: visible
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

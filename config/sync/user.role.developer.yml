@@ -1,9 +1,12 @@
 uuid: c70f220b-becd-41ee-8652-eea4b272f5bd
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - routing_tasks
 id: developer
 label: Developer
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access the custom page'

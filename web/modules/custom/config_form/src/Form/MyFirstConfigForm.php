@@ -98,7 +98,6 @@
           $form_state->setErrorByName('email',$this->t('Email with .com extension is only allowed!'));
         }
        }
-      
     }
     /**
      * {@inheritdoc}

@@ -20,6 +20,7 @@ module:
   custom_general: 0
   datetime: 0
   dblog: 0
+  dependency_module: 0
   devel: 0
   devel_generate: 0
   dynamic_page_cache: 0
@@ -28,6 +29,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flagship: 0
   generic_form: 0
   hello_block: 0
   help: 0
@@ -36,6 +38,7 @@ module:
   link: 0
   menu_link_content: 0
   menu_ui: 0
+  myblock: 0
   mymodule: 0
   mysql: 0
   node: 0

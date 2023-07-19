@@ -1,0 +1,7 @@
+services:
+  dependency_module.sum_service:
+     class: Drupal\dependency_module\MyCustomService
+     arguments: ['@database']
+  dependency_module.title_service:
+    class: Drupal\dependency_module\ShowNodeTitle
+       

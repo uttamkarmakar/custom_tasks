@@ -15,7 +15,6 @@
      * 
      * @return AccessResult
      */
-
     public function access() {
      $user = \Drupal::currentUser();
      if($user->hasPermission('access the custom page')) {
