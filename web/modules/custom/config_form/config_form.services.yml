@@ -1,0 +1,6 @@
+services:
+  config_form.config_form:
+    class: Drupal\config_form\Form\MyFirstConfigForm
+    arguments: ['@config.factory']
+    tags:
+      - { name: form, form_id: custom_form.config }
