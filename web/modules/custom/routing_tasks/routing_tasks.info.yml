@@ -1,0 +1,6 @@
+name: Routing Tasks
+description: This module contains tasks related to routing system
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
+version: ^10

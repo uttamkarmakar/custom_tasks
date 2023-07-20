@@ -1,0 +1,4 @@
+access the custom page:
+  title: 'Access the custom page'
+  description: 'Allow users to access the custom page provided by the routing_task module'
+  restrict access: true

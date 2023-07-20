@@ -1,0 +1,10 @@
+services:
+  routing_tasks.access_check:
+    class: Drupal\routing_tasks\Access\MyAccessCheck
+    tags:
+      - { name: access_check, applies_to: _example_access_check}
+      
+  routing_tasks.route_subscriber:
+    class: Drupal\routing_tasks\Routing\MyRouteSubscriber
+    tags:
+      - { name: event_subscriber }
