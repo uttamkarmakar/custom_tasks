@@ -1,10 +1,12 @@
-# node.type.car_brand.yml
+uuid: 8dd1cf4a-8a5f-4fa5-ac3c-b7c3691ab301
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
-      - custom_bar # This is the name of the module we're using
+      - custom_bar
+_core:
+  default_config_hash: AdLEEA26bo45ah6JF9Orur7ZPvE6s4__54g1x2ldXCk
 name: 'Car Brand'
 type: car_brand
 description: 'Content type that can be used to provide additional information on <em>Car Brands</em>'

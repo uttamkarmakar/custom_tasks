@@ -1,16 +1,17 @@
-# core.entity_view_display.node.car_brand.default.yml
+# core.entity_view_display.node.car_brand.default.yml                           
 langcode: en
 status: true
 dependencies:
     config:
-        - field.field.node.car_brand.body
-        - node.type.car_brand
+        - field.field.node.movie.body
+        - field.field.node.movie.field_image
+        - node.type.movie
     module:
         - text
         - user
-id: node.car_brand.default
+id: node.movie.default
 targetEntityType: node
-bundle: car_brand
+bundle: movie
 mode: default
 content:
     body:
@@ -20,5 +21,5 @@ content:
         settings: {  }
         third_party_settings: {  }
     links:
-        weight: 100
+        weight: 100 
 hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 5e530bc5-1c40-4cc6-b4a8-17345216c498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.car_brand
+  module:
+    - text
+_core:
+  default_config_hash: i9kpoLTCKtABTFmsa2V1Kw-IpTwl5XUveOfP3mThgpE
+id: node.car_brand.body
+field_name: body
+entity_type: node
+bundle: car_brand
+label: Body
+description: 'More specific information about the car brand.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

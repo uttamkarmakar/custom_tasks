@@ -1,0 +1,20 @@
+uuid: 639685d2-571b-4731-bfdd-4afa849c7360
+langcode: en
+status: true
+dependencies:
+  module:
+    - my_custom_field
+    - node
+id: node.field_my_custom_field
+field_name: field_my_custom_field
+entity_type: node
+type: custom_field_type
+settings:
+  length: '255'
+module: my_custom_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

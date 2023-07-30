@@ -1,0 +1,40 @@
+uuid: c58d126a-5afd-48a7-ba75-cf1087e20031
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brand_logo
+    - node.type.car_brand
+  module:
+    - image
+_core:
+  default_config_hash: UsV_Mb7Nd_9lg3YExFUBOFUlHsOn3CUbtttwuvyTzD8
+id: node.car_brand.field_brand_logo
+field_name: field_brand_logo
+entity_type: node
+bundle: car_brand
+label: 'Brand Logo'
+description: 'The logo of the car brand.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: car_brands/logos
+  file_extensions: 'png jpg jpeg'
+  max_filesize: 10MB
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

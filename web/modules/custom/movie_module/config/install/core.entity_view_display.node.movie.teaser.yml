@@ -4,14 +4,15 @@ status: true
 dependencies:
     config:
         - core.entity_view_mode.node.teaser
-        - field.field.node.car_brand.body
-        - node.type.car_brand
+        - field.field.node.movie.body
+        - field.field.node.movie.field_image
+        - node.type.movie
     module:
         - text
         - user
-id: node.car_brand.teaser
+id: node.movie.teaser
 targetEntityType: node
-bundle: car_brand
+bundle: movie
 mode: teaser
 content:
     body:

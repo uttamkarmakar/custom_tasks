@@ -1,0 +1,16 @@
+uuid: 695f0919-abbb-4b0e-8863-ad17bfe6c6c9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - movie_module
+_core:
+  default_config_hash: E-MNSXONV03Z-ACWXvFk0-mfcL1d65LoVKxiR0C1WOk
+name: Movie
+type: movie
+description: 'Content type that used to provide additional information about movies'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true
