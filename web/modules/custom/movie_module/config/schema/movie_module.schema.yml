@@ -12,3 +12,12 @@ movie_module.movie_awards.*:
       type: string
     description:
       type: string
+    year:
+      type: integer
+      label: year
+    movie:
+      type: entity_reference
+      label: Movie
+      target_type: node
+      handler: default:node
+      targer_bundles: { movie: movie}    

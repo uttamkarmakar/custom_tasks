@@ -1,0 +1,6 @@
+movie_budget.settings_form:
+  title: 'Movie Budget'
+  description: 'Configure budget-friendly amount for movies.'
+  parent: system.admin
+  route_name: movie_budget.settings_form
+  weight: 5
