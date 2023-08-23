@@ -1,0 +1,5 @@
+services:
+  event_dashboard.table_and_stats:
+    class: Drupal\event_dashboard\Services\EventDashboardServices
+    arguments: ['@database', '@date.formatter']
+
