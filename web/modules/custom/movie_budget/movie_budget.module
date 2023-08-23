@@ -1,0 +1,56 @@
+<?php
+//   use Drupal\Core\Entity\EntityInterface;
+//   use Drupal\node\Entity\Node;
+
+//   /**
+//    * Implements hook_entity_view().
+//    */
+//   function movie_budget_entity_view(array &$build, EntityInterface $entity, $display, $view_mode) {
+//     if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'movie') {
+//       // Load the config form values.
+//       $config = \Drupal::config('movie_budget.settings');
+  
+//       // Get the budget value from the config form.
+//       $budget = $config->get('budget_amount');
+  
+//       // Get the movie node's amount field value.
+//       $amount = $entity->get('field_movie_price')->value;
+  
+//       // Compare the amounts and set the text and attributes accordingly.
+//       if ($budget > $amount) {
+//         $status = 'The movie is under budget';
+//         $color = 'yellow';
+//         $font_size = '20px';
+//         $font_weight = 'normal';
+//       }
+//       elseif ($budget < $amount) {
+//         $status = 'The movie is over budget';
+//         $color = 'red';
+//         $font_size = '24px';
+//         $font_weight = 'bold';
+//       }
+//       else {
+//         $status = 'The movie is within budget';
+//         $color = 'green';
+//         $font_size = '20px';
+//         $font_weight = 'normal';
+//       }
+  
+//       $build['budget_status'] = [
+//         '#type' => 'html_tag',
+//         '#tag' => 'p',
+//         '#value' => $status,
+//         '#attributes' => [
+//           'style' => 'color:' . $color . '; font-size: ' . $font_size . '; font-weight: ' . $font_weight . ';',
+//         ],
+//       ];
+//     }
+//   }
+
+  /**
+ * Implements hook_toolbar_alter().
+ */
+function movie_budget_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'movie_budget/custom_icon_styles';
+}
+?>  

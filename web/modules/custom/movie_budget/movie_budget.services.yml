@@ -1,0 +1,6 @@
+services:
+  movie_budget.config_factory:
+    class: Drupal\movie_budget\EventSubscriber\MyBudgetEventSubscriber
+    arguments: ['@config.factory', '@current_route_match', '@messenger']
+    tags:
+      - {name: event_subscriber}

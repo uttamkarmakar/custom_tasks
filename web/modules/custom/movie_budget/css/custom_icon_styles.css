@@ -1,0 +1,10 @@
+a.toolbar-icon-movie-budget-settings-form::before{
+  background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-camera-shutter-1440320-1215947.png?f=avif&w=256');
+  opacity: 0.6;
+}
+
+a.toolbar-icon-movie-budget-settings-form:active::before,
+a.toolbar-icon-movie-budget-settings-form.is-active::before{
+  background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-camera-shutter-1440320-1215947.png?f=avif&w=256');
+  opacity: 1;
+}
