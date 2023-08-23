@@ -1,0 +1,9 @@
+
+event_dashboard.table_and_stats:
+  path: '/event-dashboard'
+  defaults:
+    _controller: '\Drupal\event_dashboard\Controller\EventDashboardController::displayTableAndStats'
+    _title: 'Event Table and Statistics'
+  requirements:
+    _permission: 'access content'    
+
